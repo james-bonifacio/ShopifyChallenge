@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class Api {
 
-    public Map<String, List<String>> getOrdersByProvince(String url) {
+    public HashMap<String, List<String>> getOrdersByProvince(String url) {
 
         JSONObject res = requestJson(url);
 
@@ -31,7 +31,7 @@ public class Api {
             e.printStackTrace();
         }
 
-        Map<String, List<String>> ordersByProvince = new HashMap<String, List<String>>(orders.length());
+        HashMap<String, List<String>> ordersByProvince = new HashMap<String, List<String>>(orders.length());
 
         for (int i=0; i<orders.length(); i++) {
 
@@ -73,7 +73,7 @@ public class Api {
         return ordersByProvince;
     }
 
-    public Map<String, List<String>> getOrdersByYear(String url) {
+    public HashMap<String, List<String>> getOrdersByYear(String url) {
 
         JSONObject res = requestJson(url);
 
@@ -85,7 +85,7 @@ public class Api {
             e.printStackTrace();
         }
 
-        Map<String, List<String>> ordersByYear = new HashMap<String, List<String>>(orders.length());
+        HashMap<String, List<String>> ordersByYear = new HashMap<String, List<String>>(orders.length());
 
         for (int i=0; i<orders.length(); i++) {
 
